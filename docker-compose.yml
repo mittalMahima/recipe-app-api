@@ -3,7 +3,6 @@ services:
   app:
     build:
       context: .
-       dockerfile: Dockerfile
       args:  # overridden by setting to true, bydefault set to false in dockerfile while defing a build arg dev.
         - DEV=true
     ports:
