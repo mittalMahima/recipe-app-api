@@ -1,0 +1,13 @@
+#version: "3.9" #Removed obsolete version assuggested by chatgpt
+services:
+  app:
+    build:
+      context: .
+      args:  # overridden by setting to true, bydefault set to false in dockerfile while defing a build arg dev.
+        - DEV=true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
