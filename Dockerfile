@@ -15,7 +15,7 @@ RUN python -m venv /py && \
         build-base postgresql-dev musl-dev && \
     /py/bin/pip install -r /tmp/requirements.txt && \
     #shell script: if dev env variable w/c is a build arg set to true then run code.
-    if [ $DEV = "true"]; \  
+    if [ $DEV = "true" ]; \  
     #if dev=true, it will install dev dependencies. When we run dockerfile with dev =true, it will install actual
     #dependencies with requirements.txt and also the dev dependencies. However ifwe build w/o dev being true, dev
     #dependencies won't be installled on docker image adding security and saving space bcz no worries about bugs
