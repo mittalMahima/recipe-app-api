@@ -45,3 +45,6 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Recipe)
+admin.site.register(models.Tag)  # ensures that the new tag model is manageable throgh django admin interface
+admin.site.register(models.Ingredient)  # To ensure that we can view and change the items in the admin interface if we need to
